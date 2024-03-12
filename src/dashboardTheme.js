@@ -44,7 +44,7 @@ export const dashboardTheme = createTheme({
             fontWeight: 600,
             color: '#fff',
             letterSpacing: '0.5px',
-            textTransform: 'capitalize',
+            textTransform: 'capitalize',//El texto tendrá la letra inicial mayúscula
         },
     },
   });

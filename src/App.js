@@ -9,6 +9,7 @@ function App() {
   const [title, setTitle] = useState(null);
   const location = useLocation();
   
+  {/**"/\W/g" nos elimina la barra inclinada del path */}
   useEffect(() => {
     const parsedTitle = location.pathname.replace(/\W/g, ' ');
     setTitle(parsedTitle);

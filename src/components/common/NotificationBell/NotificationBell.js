@@ -14,6 +14,10 @@ const notifications = [
         id: 1,
         label: 'Second notification'
     },
+    {
+        id: 1,
+        label: 'Thrirt notification'
+    },
 ];
 
 const NotificationBell = ({ iconColor }) => {
@@ -33,13 +37,14 @@ const NotificationBell = ({ iconColor }) => {
     };
 
     return (
-        <div>
+        <div>{/**Si hay notificaciones le mandamos el tamaño de notificaiones, caso contrario mostramos el mensaje */}
             <Tooltip title={notifications.length ? newNotifications : noNotifications}>
                 <IconButton
                     color={iconColor}
                     onClick={notifications.length ? handleOpen : null}
                     anchorEl={anchorEl}
                 >
+                    {/**Muestra en el contenido el tamaño de la notificación */}
                     <Badge
                         badgeContent={notifications.length}
                         color="error"
